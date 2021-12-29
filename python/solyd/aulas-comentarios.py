@@ -86,8 +86,31 @@ v.pop() : Remove o último da lista.
 
 # Aula 5 - Estruturas de laço (WHILE e FOR):
 '''
-for i in v: : Percorre todas posições para determinado valor.
+for i in v: : Percorre todas posições em determinado valor.
 range(n) : Cria [n] quantidade de caracteres em ordem numérica.
     range(i, in, n) : Cria uma contagem em ordem numérica apartir do [i] até [in] pulando n.
+len(v) : Retorna a quantidade de itens [i].
+
+while: : Condicional enquanto.
+
+v += n : n somado ao valor anterior.
+break : Finaliza um processo de repetição.
 '''
-11 30
+# Atividade:
+'''
+pessoas = int(input("Quantas pessoas serão convidadas para a festa?\n"))
+lista = []
+
+while pessoas >= 1:     #for i in range(int(pessoas)):
+    nome = input("Este convite #"+str(pessoas)+" pertence à: ")
+    pessoas -= 1
+    lista.append(nome)
+
+print("Lista de convidados:")
+for convidado in lista:
+    print(convidado)
+'''
+# Aula 6 - Tuplas, dicionários e conjuntos:
+'''
+
+'''
