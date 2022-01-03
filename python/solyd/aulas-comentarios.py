@@ -39,6 +39,7 @@ else: : Condicional se-não.
 <= : Comparativo de menor-igual.
 and : Comparativo de verdadeiro-verdadeiro = True.
 or : Comparativo de verdadeiro-verdadeiro/verdadeiro-falso = True.
+in : Pertence.
 not : Negação.
 '''
 
@@ -77,5 +78,23 @@ break : Finaliza um processo de repetição.
 
 # Aula 06 - Tuplas, dicionários e conjuntos:
 '''
+lista = [i0,i1,i2] : (list) Itens ordenados e posicionamente mutáveis.
+    lista[0] : Exibe valor de item em sua posição.
+tupla = (i0,i1,i2) : (tuple) Itens ordenados, limitatos e não-mutáveis.
+    lista[0] : Exibe valor de item em sua posição.
+dicionario = {"c1":v1,"c2":v2} : (dict) Chave + valor; chaves não ordenadas e repetidas.
+    dicionario[c1] : Exibe valor de chave em seu nome.
+    dicionario.values() : Lista todos os valores.
+    dicionario.keys() : Lista todas as chaves.
+conjunto = set{va,vb,vc} : (set) Não há ordem e repetição de valores em itens (repetição de mesmos itens).
+    conjunto.add(v) : Adiciona um valor como item ao conjunto.
+    conjunto.remove(v) : Remove um item com este valor.
 
 '''
+
+# Aula 7 - Funções e Métodos:
+'''
+def funcao(p): : Define uma função a partir de argumento (parâmetro).
+    return : Retorno de uma condição.
+'''
+

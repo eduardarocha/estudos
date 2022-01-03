@@ -35,3 +35,16 @@ for nome in convites:
     print(nome)
 '''
 
+# Aula 07 - Atividade:
+'''
+
+'''
+def maior(colecao):
+    valor = 0
+    for i in colecao:
+        if (valor == 0) or (i > valor):
+            valor = i
+    return valor
+def menor(colecao):
+    return 
+print("Maior número é",maior({1,2,5,32,6,3,2}))
