@@ -98,3 +98,7 @@ def funcao(p): : Define uma função a partir de argumento (parâmetro).
     return : Retorno de uma condição.
 '''
 
+# Aula 8 - Argumentos de linha de comando:
+'''
+
+'''

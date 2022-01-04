@@ -37,14 +37,19 @@ for nome in convites:
 
 # Aula 07 - Atividade:
 '''
-
-'''
 def maior(colecao):
-    valor = 0
+    valor = None
     for i in colecao:
-        if (valor == 0) or (i > valor):
+        if (valor is None) or (i > valor):
             valor = i
     return valor
 def menor(colecao):
-    return 
-print("Maior número é",maior({1,2,5,32,6,3,2}))
+    valor = float("inf")
+    for i in colecao:
+        if (i < valor):
+            valor = i
+    return valor
+print(maior({1,-2,3,4,5}))
+print(menor({1,-2,3,4,5}))
+'''
+
