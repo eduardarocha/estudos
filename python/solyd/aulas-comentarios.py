@@ -1,8 +1,10 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 01 - Introdução ao Python e Configurando o Ambiente:
 '''
 Instalação do Python: https://www.python.org/downloads
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 02 - Variáveis, tipos, entrada, saída e operadores matemáticos:
 '''
 v = "valor" : variável = valor sendo função, str, int, float, bool
@@ -25,6 +27,7 @@ input(v) : Exmprime uma entrada de valor
 **(1/2) : Raiz quadrada.
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 03 - Operadores lógicos e estruturas de decisões (IF e ELSE) :
 '''
 if: : Condicional se.
@@ -43,6 +46,7 @@ in : Pertence.
 not : Negação.
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 04 - Strings e listas:
 '''
 v.lower() : Transforma um valor string em caracteres minúsculos.
@@ -63,6 +67,7 @@ len(v) : Conta o número de caracteres em um tipo string.
 v.pop() : Remove o último da lista.
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 05 - Estruturas de laço (WHILE e FOR):
 '''
 for i in v: : Percorre todas posições em determinado valor.
@@ -76,6 +81,7 @@ v += n : n somado ao valor anterior.
 break : Finaliza um processo de repetição.
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 06 - Tuplas, dicionários e conjuntos:
 '''
 lista = [i0,i1,i2] : (list) Itens ordenados e posicionamente mutáveis.
@@ -92,13 +98,87 @@ conjunto = set{va,vb,vc} : (set) Não há ordem e repetição de valores em iten
 
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 7 - Funções e Métodos:
 '''
 def funcao(p): : Define uma função a partir de argumento (parâmetro).
     return : Retorno de uma condição.
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 8 - Argumentos de linha de comando:
 '''
-
+import sys : Importação de bibliotecas, neste caso, a biblioteca "sys".
+>> C:\Users\eduar\.. : No terminal, deve-se caminhar até a pasta com o arquivo .py.
+>> python3 [nome do arquivo] [argumento_1] : Um argumento está sendo declarado [nome do arquivo]; outros argumentos podem ser declarados por espaço [argumento_1].
 '''
+# Cria um novo arquivo .py e cole este exemplo:
+'''
+import sys
+argumentos = sys.argv
+def soma(n1,n2):
+    return n1 + n2
+def sub(n1,n2):
+    return n1 - n2
+if argumentos[1] == "soma":
+    valor = soma(float(argumentos[2]), float(argumentos[3]))
+elif argumentos[1] == "sub":
+    valor = sub(float(argumentos[2]), float(argumentos[3]))
+print(valor)
+'''
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+#  Aula 9 - Orientação a objeto:
+'''
+class [nome]: : (classe) Descreve o objeto a partir de características, funções e métodos.
+    def __inti__(self): : Método construtor de objeto.
+        self.[característica] = [valor de característica atual] : Objeto e sua característica ganham um valor temporário, circunstancial.
+'''
+# Em arquivo veiculo.py:
+'''
+class Veiculo():
+    def __init__(self, cor, rodas, marca, tanque):
+        self.cor = cor
+        self.rodas = rodas
+        self.marca = marca
+        self.tanque = tanque
+        
+    def abastecer(self, litros):
+        self.tanque += litros
+'''
+'''
+from [nome do arquivo] import [nome da classe]
+class [nome]([herança]):
+'''
+# Em arquivo carro.py:
+'''
+from veiculo import Veiculo
+
+class Carro(Veiculo):
+    def __init__(self, cor, marca, tanque):
+        Veiculo.__init__(self, cor, 4, marca, tanque)
+    def abastecer(self, litros):
+        if self.tanque + litros > 50:
+            print("\nErro: tanque com capacidade inferior!")
+        else:
+            self.tanque += litros
+'''
+'''
+from [nome do arquivo] import [nome da classe] : Importa a classe de outro arquivo.
+'''
+# Em arquivo main.py:
+'''
+from veiculo import Veiculo
+from carro import Carro
+
+veiculo_01 = Veiculo("rosa", 6, "Ford", 10)
+print("\nVeiculo 01\nCor:",veiculo_01.cor+"\nRodas:",str(veiculo_01.rodas)+"\nMarca:",veiculo_01.marca+"\nTanque:",str(veiculo_01.tanque))
+veiculo_01.abastecer(10)
+print("\nVeiculo 01\nTanque:",str(veiculo_01.tanque))
+
+veiculo_02 = Carro("azul", "BMW", 30)
+print("\nVeiculo 02\nCor:",veiculo_02.cor+"\nRodas:",str(veiculo_02.rodas)+"\nMarca:",veiculo_02.marca+"\nTanque:",str(veiculo_02.tanque))
+veiculo_02.abastecer(100)
+print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
+'''
+# !!! TEM TAREFA !!!

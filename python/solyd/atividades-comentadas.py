@@ -1,3 +1,4 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 02 - Atividade:
 '''
 nome = input("Qual o seu nome?\n")
@@ -10,6 +11,7 @@ telefone = input("Qual o seu telefone?\n")
 print("\nSEU RELATÓRIO\nNome:",nome+"\nCPF:",cpf+"\nEndereço:,",endereco+"\nIdade:",idade,"anos"+"\nAltura:",altura,"metros"+"\nTelefone:",telefone)
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 03 - Atividade:
 '''
 idade = int(input("Qual a sua idade?\n"))
@@ -22,6 +24,7 @@ else:
     print("\nVocê não pode entrar no Exército.")
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 05 - Atividade:
 '''
 pessoas = int(input("Quantas pessoas convidadas?\n"))
@@ -35,6 +38,7 @@ for nome in convites:
     print(nome)
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 07 - Atividade:
 '''
 def maior(colecao):
@@ -53,3 +57,8 @@ print(maior({1,-2,3,4,5}))
 print(menor({1,-2,3,4,5}))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# :
+'''
+
+'''

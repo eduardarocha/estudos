@@ -1,5 +1,6 @@
 # https://www.pythonprogressivo.net/2018/06/Lista-Exercicios-Lacos-Looping-Python.html
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 01
 '''
 nota = float(input("Registre a nota: "))
@@ -8,6 +9,7 @@ while (nota < 0) or (nota > 10):
 print("Nota",str(nota),"registrada.")
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 02
 '''
 user = input("User: ")
@@ -18,6 +20,7 @@ while senha == user:
 print("Acesso confirmado.")
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 03
 '''
 nome = input("\nNome: ")
@@ -38,6 +41,7 @@ while estado_civil != ("s" or "c" or "v" or "d"):
 print("\nInformações registradas."+nome+"\n"+str(idade)+"\n"+str(salario)+"\n"+sexo+"\n"+estado_civil)
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 04 e 05
 '''
 a = int(input("População A: "))
@@ -56,6 +60,7 @@ while a < b:
     print("Cidade B:",str(b))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 06
 '''
 #import sys
@@ -71,6 +76,7 @@ for i in numeros:
     sys.stdout.write(str(i)+" ")
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 07
 '''
 ordem = 0
@@ -94,6 +100,7 @@ maior_numero = max(lista)
 print("Maior número:",str(maior_numero))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 08
 '''
 ordem = 0
@@ -109,6 +116,7 @@ for numero in lista:
 print("Soma: "+str(soma)+"\nMédia: "+str(media))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 09
 '''
 numeros = range(0,51,2)
@@ -116,8 +124,8 @@ for i in numeros:
     print(str(i), end=" ")
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 10 e 11
-# 
 '''
 numero_1 = int(input("1º número: "))
 numero_2 = int(input("2º número: ")) + 1
@@ -128,6 +136,7 @@ for i in range(numero_1,numero_2):
 print("\nSoma:",str(soma))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 12
 '''
 tabuada = int(input("Tabuada de: "))
@@ -136,7 +145,6 @@ for i in range(1,11):
     resultado = tabuada * i
     print(tabuada,"x",i,"=",resultado)
 '''
-# https://pt.stackoverflow.com/questions/382450/em-que-ocasi%C3%A3o-eu-uso-o-d-em-uma-linguagem-python
 '''
 tabuada = float(input("Tabuada de: "))
 while tabuada > 10:
@@ -147,6 +155,7 @@ for i in range(1,11):
     print("%d x %d = %d" % (tabuada,i,resultado))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 13
 '''
 base = int(input("Base: "))
@@ -163,8 +172,8 @@ resultado = base**expoente
 resultado = print("%d^%d = %d" % (base,expoente,resultado))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 14
-# https://www.arquivodecodigos.com.br/dicas/939--como-obter-o-resto-de-uma-divisao-de-inteiros-em-python-o-operador-modulo-da-linguagem-python.html
 '''
 ordem = range(1,11)
 pares = []
@@ -179,6 +188,7 @@ print("Pares:",str(pares))
 print("Impares:",str(impares))
 '''
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 15
 '''
 fazer duas tabelas, depois somar. Será?
