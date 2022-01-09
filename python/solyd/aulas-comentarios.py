@@ -103,6 +103,8 @@ conjunto = set{va,vb,vc} : (set) Não há ordem e repetição de valores em iten
 '''
 def funcao(p): : Define uma função a partir de argumento (parâmetro).
     return : Retorno de uma condição.
+__init__ : Inicia um objeto e pede suas predefinições/estado.
+__str__ : Print padrão de um objeto construido a partir da classe.
 '''
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
@@ -181,4 +183,9 @@ print("\nVeiculo 02\nCor:",veiculo_02.cor+"\nRodas:",str(veiculo_02.rodas)+"\nMa
 veiculo_02.abastecer(100)
 print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 '''
-# !!! TEM TAREFA !!!
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Aula 10 - Entrada e saída de arquivos:
+'''
+
+'''
