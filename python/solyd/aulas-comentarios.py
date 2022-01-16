@@ -187,5 +187,25 @@ print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Aula 10 - Entrada e saída de arquivos:
 '''
+[nome da variável] = open([caminho do arquivo], [modo de abertura]) : Criação de arquivos.
+    [modo de abertura] : "r" read, "w" write, "r+" read-write, "a" append, "b" bits (binary)/"rb" read-binary.
+[nome da variável].read() : Leitura do arquivo.
+[nome da variável].write() : Escrita do arquivo.
+'''
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Aula 11 - Tratamentos de erros e exceções (TRY e EXCEPT):
+'''
+try: : Tentativa.
+except [especificação de erro]: : Exceção à tentativa (erro, especificado ou não).
+    except [especificação de erro] as [variável]: : Exceção à tentativa, adicionado seu valor à uma variável.
+
+import time : Importação de bibliotecas, neste caso, a biblioteca "time".
+    time.sleep([tempo em segundos]) : Pausa o programa por [tempo em segundos].
+'''
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Aula 12 - Bibliotecas, PIP e Requisições Web:
+'''
 
 '''
