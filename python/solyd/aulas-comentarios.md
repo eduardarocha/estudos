@@ -139,7 +139,7 @@ _**string**_ : Lista de caracteres.
 >`python3 [nome do arquivo] [argumento_1]` : Um argumento está sendo declarado `[nome do arquivo]`; outros argumentos podem ser declarados por espaço `[argumento_1] [argumento_2] ...`
 
 Em arquivo [nome do arquivo].py:
-```python
+``` python
 import sys
 argumentos = sys.argv
 def soma(n1,n2):
@@ -161,7 +161,7 @@ print(valor)
     * `self.[característica] = [valor de característica atual]` : Objeto e sua característica ganham um valor temporário, circunstancial.
 
 Em arquivo veiculo.py:
-```python
+``` python
 class Veiculo():
     def __init__(self, cor, rodas, marca, tanque):
         self.cor = cor
@@ -178,7 +178,7 @@ class Veiculo():
 `class [nome]([herança]):` : Definir uma classe `[nome]` e sua classe de `[herança]`.
 
 Em arquivo carro.py:
-```python
+``` python
 from veiculo import Veiculo
 
 class Carro(Veiculo):
@@ -192,7 +192,7 @@ class Carro(Veiculo):
 ```
 
 Em arquivo main.py:
-```python
+``` python
 from veiculo import Veiculo
 from carro import Carro
 
@@ -231,13 +231,21 @@ print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 
 ## AULA 12 - Bibliotecas, PIP e Requisições Web
 
-> No terminal:
+> No terminal, algumas bibliotecas:
 >
->`pip3 install requests` ou `-m pip install requests` : Instalando pip, gerenciador de pacotes externos.
+> `pip install requests` ou `-m pip install requests` : Iniciando o pip (gerenciador de pacotes externos) e instalando a biblioteca `requests`.
+>
+> `pip install bs4` ou `-m pip install bs4` : Iniciando o pip (gerenciador de pacotes externos) e instalando a biblioteca `bs4` (Beautiful Soup 4).
 
-`import requests` ou [`from pip._vendor import requests`](https://stackoverflow.com/questions/48775755/importing-requests-into-python-using-visual-studio-code) : Requisições.
+`import requests` ou [`from pip._vendor import requests`](https://stackoverflow.com/questions/48775755/importing-requests-into-python-using-visual-studio-code) : Requisições web.
 
-`get` : Receber/pegar informações.
+`requisicao = requests.get("[endereço]")` : Requisição para receber/pegar informações.
+* `requisicao.status_code` : Estado do endereço em códigos numéricos.
+* `requisicao.text` : Conteúdo do endereço; código-fonte.
 
-`post` : Enviar informações.
+`requests.post("[endereço]")` : Requisição para enviar informações.
 
+### Cabeçalho-padrão http (headers)
+* `cabecalho = {[cabeçalho-padrão http]: [conteúdo]}` `headers = cabecalho`: Alterando especificações de cabeçalho (`headers`), como "User-agent" (`[cabeçalho-padrão http]`,especificações do navegador, sistema operacional, etc).
+
+28
