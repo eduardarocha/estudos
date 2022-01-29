@@ -245,7 +245,7 @@ print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 
 `requests.post("[endereço]")` : Requisição para enviar informações.
 
-### Cabeçalho-padrão http (headers)
+### `headers` : Cabeçalhos-padrão http (User-agent)
 * `cabecalho = {[cabeçalho-padrão http]: [conteúdo]}` `headers = cabecalho`: Alterando especificações de cabeçalho (`headers`), como "User-agent" (`[cabeçalho-padrão http]`,especificações do navegador, sistema operacional, etc).
 
 28
