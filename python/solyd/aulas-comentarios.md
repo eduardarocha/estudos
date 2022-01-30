@@ -138,7 +138,7 @@ _**string**_ : Lista de caracteres.
 >
 >`python3 [nome do arquivo] [argumento_1]` : Um argumento está sendo declarado `[nome do arquivo]`; outros argumentos podem ser declarados por espaço `[argumento_1] [argumento_2] ...`
 
-Em arquivo [nome do arquivo].py:
+**Em arquivo [nome do arquivo].py:**
 ``` python
 import sys
 argumentos = sys.argv
@@ -160,7 +160,7 @@ print(valor)
 * `def __inti__(self)`: : Método construtor de objeto.
     * `self.[característica] = [valor de característica atual]` : Objeto e sua característica ganham um valor temporário, circunstancial.
 
-Em arquivo veiculo.py:
+**Em arquivo veiculo.py:**
 ``` python
 class Veiculo():
     def __init__(self, cor, rodas, marca, tanque):
@@ -177,7 +177,7 @@ class Veiculo():
 
 `class [nome]([herança]):` : Definir uma classe `[nome]` e sua classe de `[herança]`.
 
-Em arquivo carro.py:
+**Em arquivo carro.py:**
 ``` python
 from veiculo import Veiculo
 
@@ -191,7 +191,7 @@ class Carro(Veiculo):
             self.tanque += litros
 ```
 
-Em arquivo main.py:
+**Em arquivo main.py:**
 ``` python
 from veiculo import Veiculo
 from carro import Carro
@@ -245,7 +245,42 @@ print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 
 `requests.post("[endereço]")` : Requisição para enviar informações.
 
-### `headers` : Cabeçalhos-padrão http (User-agent)
-* `cabecalho = {[cabeçalho-padrão http]: [conteúdo]}` `headers = cabecalho`: Alterando especificações de cabeçalho (`headers`), como "User-agent" (`[cabeçalho-padrão http]`,especificações do navegador, sistema operacional, etc).
+### `headers` : Cabeçalhos
+`cabecalho = {[especificação]: [conteúdo]}` `headers = cabecalho` : Alterando ou criando especificações (`[especificação]: [conteúdo]`) de cabeçalho (`headers`).
 
-28
+Pode-se criar outras especificações de cabeçalhos.
+
+De cabeçalho-padrão http, tem-se:
+* `User-agent` : Especificações do navegador, sistema operacional, etc.
+* `Referer` : De onde/quem vem o acesso para determinado endereço.
+
+### `cookies` : Informações temporárias
+`temporario = {[especificação]: [conteúdo]}` `cookies = temporario` : Alterando ou criando especificações (`[especificação]: [conteúdo]`) de cookies (`cookies`).
+
+Pode-se criar outras especificações de cookies.
+
+### `data` : Enviar dados
+`dados = {[especificação]: [conteúdo]}` `dados = data` : Alterando ou criando especificações (`[especificação]: [conteúdo]`) de dados (`data`).
+
+Pode-se criar outras especificações de dados.
+
+**Em arquivo main.py:**
+``` python
+from pip._vendor import requests
+
+cabecalho = {"User-agent": "Windows 10", "Referer": "https://www.google.com"}
+temporario = {"Ultima-visita": "29-01-2022"}
+dados = {"User": "Eduarda", "Password": "eduarda123"}
+texto = None
+
+try:
+    requisicao = requests.get("https://www.g1.com.br", headers = cabecalho, cookies = temporario, data = dados)
+    texto = requisicao.text
+except Exception as e:
+    print("Erro de requisição:", e)
+print(texto)
+```
+
+
+## AULA 13 - API, JSON e consultando listas de filmes
+
