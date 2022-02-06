@@ -284,3 +284,17 @@ print(texto)
 
 ## AULA 13 - API, JSON e consultando listas de filmes
 
+_**API**_ : Interface de comunicação com outros programas.
+
+Databases abertas com informações de diversos filmes ([API movies](https://apipheny.io/free-api/)):
+* API utilizada na aula : [OMDb API](https://www.omdbapi.com).
+* API utilizada na prática : [Public APIS](https://api.publicapis.org/entries).
+
+`import json` : Biblioteca json; no python, permite-se que transforme json para objeto (neste caso, dicionário).
+
+11:00
+
+**Em arquivo main.py:**
+``` python
+
+```
