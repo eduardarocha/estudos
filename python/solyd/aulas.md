@@ -1,9 +1,9 @@
-## AULA 01 - Introdução ao Python e Configurando o Ambiente
+## Aula 01 - Introdução ao Python e Configurando o Ambiente
 
 Instalação do [Python](https://www.python.org/downloads).
 
 
-## AULA 02 - Variáveis, tipos, entrada, saída e operadores matemáticos
+## Aula 02 - Variáveis, tipos, entrada, saída e operadores matemáticos
 
 _**variável**_ : valor sendo função, str, int, float, bool.
 
@@ -34,7 +34,7 @@ _**variável**_ : valor sendo função, str, int, float, bool.
 * `v += n` : `n` somado ao valor anterior.
 
 
-## AULA 03 - Operadores lógicos e estruturas de decisões (IF e ELSE)
+## Aula 03 - Operadores lógicos e estruturas de decisões (IF e ELSE)
 
 `if:` : Condicional se.
 
@@ -56,7 +56,7 @@ _**variável**_ : valor sendo função, str, int, float, bool.
 * `not` : Negação.
 
 
-## AULA 04 - Strings e listas
+## Aula 04 - Strings e listas
 
 _**string**_ : Lista de caracteres.
 
@@ -88,7 +88,7 @@ _**string**_ : Lista de caracteres.
 `v.split("i")` : Transforma um valor string em lista quando um determinado caractere `[i]`.
 
 
-## AULA 05 - Estruturas de laço (WHILE e FOR)
+## Aula 05 - Estruturas de laço (WHILE e FOR)
 
 `for i in v:` : Percorre todas posições em determinado valor.
 
@@ -102,7 +102,7 @@ _**string**_ : Lista de caracteres.
 `len(v)` : Retorna a quantidade de itens `[i]`.
 
 
-## AULA 06 - Tuplas, dicionários e conjuntos
+## Aula 06 - Tuplas, dicionários e conjuntos
 
 `lista = [i0,i1,i2]` : _**list**_ : Itens ordenados e posicionamente mutáveis.
 * `lista[0]` : Exibe valor de item em sua posição.
@@ -120,7 +120,7 @@ _**string**_ : Lista de caracteres.
 * `conjunto.remove(v)` : Remove um item com este valor.
 
 
-## AULA 07 - Funções e Métodos
+## Aula 07 - Funções e Métodos
 
 `def funcao(p):` : Define uma função a partir de argumento (parâmetro).
 * `return` : Retorno de uma condição.
@@ -130,7 +130,7 @@ _**string**_ : Lista de caracteres.
 `__str__ `: Print padrão de um objeto construido a partir da classe.
 
 
-## AULA 08 - Argumentos de linha de comando
+## Aula 08 - Argumentos de linha de comando
 
 `import sys` : Importação de bibliotecas, neste caso, a biblioteca "sys".
 
@@ -154,7 +154,7 @@ print(valor)
 ```
 
 
-##  AULA 09 - Orientação a objeto
+##  Aula 09 - Orientação a objeto
 
 `class [nome]:` : _**classe**_ : Descreve o objeto a partir de características, funções e métodos.
 * `def __inti__(self)`: : Método construtor de objeto.
@@ -168,7 +168,7 @@ class Veiculo():
         self.rodas = rodas
         self.marca = marca
         self.tanque = tanque
-        
+
     def abastecer(self, litros):
         self.tanque += litros
 ```
@@ -208,7 +208,7 @@ print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 ```
 
 
-## AULA 10 - Entrada e saída de arquivos
+## Aula 10 - Entrada e saída de arquivos
 
 `[variável] = open([caminho do arquivo], [modo de abertura])` : Criação de arquivos.
 * `[modo de abertura]` : "r" read, "w" write, "r+" read-write, "a" append, "b" bits (binary)/"rb" read-binary.
@@ -218,7 +218,7 @@ print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 `[nome da variável].write()` : Escrita do arquivo.
 
 
-## AULA 11 - Tratamentos de erros e exceções (TRY e EXCEPT)
+## Aula 11 - Tratamentos de erros e exceções (TRY e EXCEPT)
 
 `try:` : Tentativa.
 
@@ -229,7 +229,7 @@ print("\nVeiculo 02\nTanque:",str(veiculo_02.tanque))
 * `time.sleep([tempo em segundos])` : Pausa o xprograma por [tempo em segundos].
 
 
-## AULA 12 - Bibliotecas, PIP e Requisições Web
+## Aula 12 - Bibliotecas, PIP e Requisições Web
 
 > No terminal, algumas bibliotecas:
 >
@@ -282,17 +282,17 @@ print(texto)
 ```
 
 
-## AULA 13 - API, JSON e consultando listas de filmes
+## Aula 13 - API, JSON e consultando listas de filmes
 
 _**API**_ : Interface de comunicação com outros programas.
 
 Databases abertas com informações de diversos filmes ([API movies](https://apipheny.io/free-api/)):
 * API utilizada na aula : [OMDb API](https://www.omdbapi.com).
-* API utilizada na prática : [Public APIS](https://api.publicapis.org/entries).
+* [Public APIS](https://api.publicapis.org/entries).
 
-`import json` : Biblioteca json; no python, permite-se que transforme json para objeto (neste caso, dicionário).
-
-11:00
+`import json` : Biblioteca json.
+* `json.loads(requisicao.text)` : No python, permite-se que transforme json para objeto (dicionário).
+    * `requisicao.text` : corresponde ao json resposta (dados ou informações) de uma requisição web.
 
 **Em arquivo main.py:**
 ``` python
