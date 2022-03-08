@@ -288,13 +288,41 @@ _**API**_ : Interface de comunicação com outros programas.
 
 Databases abertas com informações de diversos filmes ([API movies](https://apipheny.io/free-api/)):
 * API utilizada na aula : [OMDb API](https://www.omdbapi.com).
-* [Public APIS](https://api.publicapis.org/entries).
+* Outra API: [Public APIS](https://api.publicapis.org/entries).
 
 `import json` : Biblioteca json.
 * `json.loads(requisicao.text)` : No python, permite-se que transforme json para objeto (dicionário).
     * `requisicao.text` : corresponde ao json resposta (dados ou informações) de uma requisição web.
 
+`exit` : Sair/fechar o programa.
+
 **Em arquivo main.py:**
 ``` python
+from pip._vendor import requests
+import json
 
+def requisicao(titulo):
+    try:
+        requisicao = requests.get('https://www.omdbapi.com/?apikey=4ece8198&t=' + titulo + '&type=movie')
+        dicionario = json.loads(requisicao.text)
+        return dicionario
+    except:
+        print('Erro na conexão')
+        return None
+
+def mostrar_detalhes(filme):
+    print('Nota:', filme['imdbRating'] + '/10' + '\nTítulo:', filme['Title'], '(' + filme['Year'] + ')' + '\nAtores:', filme['Actors'] + '\nDiretor:', filme['Director'] + '\nCartaz:', filme['Poster'])
+
+sair = False
+while not sair:
+    escolha = input('Escreva o nome de um filme ou "sair": ')
+    if escolha == 'sair':
+        sair = True
+        print('Saindo...')
+    else:
+        filme = requisicao(escolha)
+        if filme['Response'] == 'False':
+            print('Filme não encontrado.')
+        else:
+            mostrar_detalhes(filme)
 ```
